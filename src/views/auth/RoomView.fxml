@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="613.0" prefWidth="456.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="service.RoomViewService">
+   <children>
+      <TextField fx:id="roomNumField" layoutX="150.0" layoutY="50.0"/>
+      
+      <Label layoutX="46.0" layoutY="80.0" text="Room Type:" />
+      <RadioButton fx:id="singleRadioButton" layoutX="177.0" layoutY="100.0" mnemonicParsing="false" text="SINGLE" />
+      <RadioButton fx:id="doubleRadioButton" layoutX="254.0" layoutY="100.0" mnemonicParsing="false" text="DOUBLE" />
+      <RadioButton fx:id="suiteRadioButton" layoutX="340.0" layoutY="100.0" mnemonicParsing="false" text="SUITE" />
+      <RadioButton fx:id="deluxeRadioButton" layoutX="419.0" layoutY="100.0" mnemonicParsing="false" text="DELUXE" />
+      
+      <Label layoutX="46.0" layoutY="127.0" text="Is Available:" />
+      <ChoiceBox fx:id="isAvailableField" layoutX="148.0" layoutY="123.0" prefWidth="150.0" />
+      <Label layoutX="46.0" layoutY="177.0" text="Price:" />
+      <TextField fx:id="priceField" layoutX="148.0" layoutY="173.0" />
+      <Label layoutX="44.0" layoutY="235.0" text="Hotel Name:" />
+      <Button layoutX="46.0" layoutY="286.0" mnemonicParsing="false" onAction="#handleAddRoom" text="Add Room" />
+      <Button layoutX="148.0" layoutY="286.0" mnemonicParsing="false" onAction="#handleUpdateRoom" text="Update Room" />
+      <Button layoutX="250.0" layoutY="286.0" mnemonicParsing="false" onAction="#handleDeleteRoom" text="Delete Room" />
+      <ListView fx:id="roomListView" layoutX="46.0" layoutY="334.0" onMouseClicked="#handleRoomSelection" prefHeight="200.0" prefWidth="360.0" />
+      <ChoiceBox fx:id="hotelNameField" layoutX="151.0" layoutY="231.0" prefWidth="150.0" />
+      <Label layoutX="156.0" layoutY="27.0" text="CRUD Room">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
